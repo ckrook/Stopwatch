@@ -2,11 +2,17 @@ import React, { useEffect, useState } from "react";
 
 function Timer() {
   const [time, setTime] = useState(0);
+  const [timeOn, setTimeOn] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTime = time + 1;
-    });
+    let interval = null;
+    if (timeOn) {
+      interval = setInterval(() => {
+        setTime((prevTime) => prevTime + 10);
+      }, 10);
+    } else {
+      clearInterval(interval);
+    }
   }, []);
 
   return (
