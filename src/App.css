@@ -1,6 +1,9 @@
 * {
-  background-color: black;
-  color: wheat;
+}
+
+body {
+  color: white;
+  @apply bg-black;
 }
 
 .app {
@@ -16,12 +19,13 @@
 
 /* MENU */
 .menu {
-  @apply flex justify-center gap-2 mb-9;
+  @apply flex justify-center gap-4 mb-9;
 }
 
 .menu__button {
-  @apply px-6 font-semibold text-base border-none bg-green-600 rounded cursor-pointer;
+  @apply px-6 font-semibold text-xl border-none bg-green-600 rounded cursor-pointer;
 }
+
 .split-btn {
   @apply bg-yellow-300 hover:bg-yellow-400 text-gray-900;
 }
@@ -43,14 +47,14 @@
 }
 
 .timer__title {
-  @apply flex justify-center w-[260px] font-semibold;
+  @apply flex justify-center w-[360px] font-normal;
 }
 .timer__title--large {
   @apply relative w-60;
 }
 
 .timelogg {
-  @apply font-bold;
+  @apply font-normal text-base;
 }
 
 .Start {

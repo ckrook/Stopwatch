@@ -41,6 +41,9 @@ function App() {
       <div className="timer">
         <div className="timer__title">
           <span className="timer__title--large">
+            {("0" + Math.floor((time / 600000) % 60)).slice(-2)}:
+          </span>
+          <span className="timer__title--large">
             {("0" + Math.floor((time / 60000) % 60)).slice(-2)}:
           </span>
           <span className="timer__title--large">
